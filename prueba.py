@@ -9,6 +9,6 @@ print("Calculadora de sumas")
 total=numA+numB
 print(nombre+", tu resultado es "+str(total)+", Adios.")
 
+ggg
 
-
-#no estoy seguro de como se comenta. pero espero salga bien
+#no estoy seguro de como se comenta. pero espero salga bienawsedhgdfhgfjgjghfjkhk
