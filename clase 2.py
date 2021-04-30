@@ -1,7 +1,19 @@
+a = 2
+b = 3
+c = 1
+
+x1=(-b+((b**2)-(4*a*c))**0.5)/2*a
+x2=(-b-((b**2)-(4*a*c))**0.5)/2*a
+print(x1)
+print(x2)
+
+
+
 import math
-
-a=math.sqrt(25)
-
-print(a)
-
-
+a = 2
+b = 3
+c = 1
+x1 = (-b + math.sqrt((b**2)-(4*a*c)))/2*a
+x2 = (-b - math.sqrt((b**2)-(4*a*c)))/2*a
+print(x1)
+print(x2)
