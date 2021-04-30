@@ -9,6 +9,7 @@ print("Calculadora de sumas")
 total=numA+numB
 print(nombre+", tu resultado es "+str(total)+", Adios.")
 
+<<<<<<< HEAD
 import math
 
 #math.sqrt(11215)
@@ -16,5 +17,8 @@ import math
 
 
 
+=======
+ggg
+>>>>>>> 76280b7e5c00b69d887111df2184e2879a7b2ddb
 
 #no estoy seguro de como se comenta. pero espero salga bienawsedhgdfhgfjgjghfjkhk

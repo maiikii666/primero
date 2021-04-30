@@ -1,3 +1,8 @@
 {
+<<<<<<< HEAD
     "python.pythonPath": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python39\\python.exe"
+=======
+    "python.pythonPath": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+    "git.ignoreLimitWarning": true
+>>>>>>> 76280b7e5c00b69d887111df2184e2879a7b2ddb
 }
