@@ -1,0 +1,8 @@
+var a;
+var b;
+resultado=a+b
+
+a=5;
+b=6;
+
+console.log(resultado);
