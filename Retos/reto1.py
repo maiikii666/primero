@@ -1,5 +1,5 @@
-tMA=float(input("Digite la Temperatura Media Anual: "))
-pMA=float(input("Digite el valor de la precipitación Anual: "))
+tMA=float(input("Digite la Temperatura Media Anual "))
+pMA=float(input("Digite el valor de la precipitacion Anual "))
 
 if (tMA>64 and tMA<90) and (pMA>4 and pMA<12.5):
     if ((tMA>87 and tMA<90) or (tMA>64 and tMA<68)) or ((pMA>10.5 and pMA<12.5) or (pMA>4 and pMA<4.99)):
