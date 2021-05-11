@@ -23,4 +23,3 @@ def funcion3():
     print("El nuevo dígito es ")
 
 if __name__ == "__main__":
-    
