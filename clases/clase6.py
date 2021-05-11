@@ -48,12 +48,12 @@ elif dig2>=dig1 and dig2>=dig3 and dig2>=dig4:
         print("El dígito", dig2, " es el mayor y es impar")
     else:
         print("El dígito", dig2, " es el mayor y es par")
-if dig3>=dig2 and dig3>=dig1 and dig3>=dig4:
+elif dig3>=dig2 and dig3>=dig1 and dig3>=dig4:
     if dig3%2==1:
         print("El dígito", dig3, " es el mayor y es impar")
     else:
         print("El dígito", dig3, " es el mayor y es par")
-if dig4>=dig1 and dig4>=dig3 and dig4>=dig2:
+elif dig4>=dig1 and dig4>=dig3 and dig4>=dig2:
     if dig4%2==1:
         print("El dígito", dig4, " es el mayor y es impar")
     else:
@@ -62,7 +62,7 @@ if dig4>=dig1 and dig4>=dig3 and dig4>=dig2:
 
 #   2. Leer dos números de 3 dígitos cada uno, formar un tercer número 
 #      con el mayor del primero y el menor del segundo.
-
+"""
 print("Este programa forma un tercer número de dos cifras, utilizando el mayor dígito del primero y el menor del segundo.")
 num1=float(input("Digite un número de 3 cifras: "))
 
@@ -97,7 +97,7 @@ elif dig23<=dig22 and dig23<=dig21:
 total=10*digMayorUno+digMayorDos
 #####    total=100*c1+10*c2+c3
 print("Sus números iniciales fueron: ", int(num1), "y ", int(num2), "El tercer número es: ", total)
-
+"""
 
 
 #   3. Leer un número de 3 dígitos y formar el mayor número posible 
@@ -146,3 +146,32 @@ total=100*Frst+10*Scnd+Thrd
 print("El número inicial era: ", num, " el número final es: ", total)
 
 """
+
+
+
+
+num=float(input("Digite un número de 4 cifras: "))
+
+dig1=int(num%10)
+dig2=int((num%100)/10)
+dig3=int((num%1000)/100)
+dig4=int((num%10000)/1000)
+
+mayor=""
+par=""
+
+if dig1>=dig2 and dig1>=dig3 and dig1>=dig4:
+    mayor=dig1
+elif dig2>=dig1 and dig2>=dig3 and dig2>=dig4:
+    mayor=dig2
+elif dig3>=dig2 and dig3>=dig1 and dig3>=dig4:
+    mayor=dig3
+elif dig4>=dig1 and dig4>=dig3 and dig4>=dig2:
+    mayor=dig4
+
+if mayor%2==0:
+    par="par"
+else:
+    par="impar"
+
+print("El mayor dígito es: ",mayor, "y es un número ",par)
