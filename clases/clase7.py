@@ -36,11 +36,9 @@ print("El número",numInicial, "tiene", cuenta, "dígitos.")
 """
 print("Ingrese los números que desee, cuando digíte -1, el programa mostrará el promedio de los números que ingresó")
 
-
 num=""
 total=0
 cuenta=0
-
 
 while num!=-1:
     num=(int(input("Ingrese un número: ")))
@@ -50,4 +48,24 @@ while num!=-1:
     else:
         promedio=total/cuenta
         print("Usted digitó", cuenta, "números, y el promedio es: ", promedio)
+"""
+
+"""
+print("Ingrese los números que desee, cuando digíte -1, el programa mostrará el promedio de los números que ingresó")
+
+num=""
+total=0
+cuenta=0
+
+num=(int(input("Ingrese un número: ")))
+
+if cuenta==0 and num==-1:
+    print("No hay números.")
+else:
+    while num!=-1:
+        total=total+num
+        cuenta+=1
+        num=(int(input("Ingrese un número: ")))
+    promedio=total/cuenta
+    print("Usted digitó", cuenta, "números, y el promedio es: ", promedio)
 """

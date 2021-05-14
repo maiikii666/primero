@@ -10,4 +10,3 @@ if (64<=tMA<=90) and (4<=pMA<=12.5):
         print("Sumamente apto")
 else:
     print("No apto")
-
