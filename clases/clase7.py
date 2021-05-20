@@ -23,7 +23,7 @@ num=int(input("Digíte un número entero positivo para saber cuantos dígitos ti
 numInicial=num
 cuenta=0
 
-while num>1:
+while num>=1:
     cuenta +=1
     num=num/10
 

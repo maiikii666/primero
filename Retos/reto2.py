@@ -15,17 +15,17 @@ noApto=0
 while i<datos:
     temp=float(input("Ingrese la temperatura: "))
     prec=float(input("Ingrese la precipítacion: "))
-    cuentaTemp=cuentaTemp+temp
-    cuentaPrec=cuentaPrec+prec
+    cuentaTemp+=temp
+    cuentaPrec+=prec
     if (64<=temp<=90) and (4<=prec<=12.5):
         if ((87<=temp<=90) or (64<=temp<=68)) or ((10.5<=prec<=12.5) or (4<=prec<=4.99)):
-            marApto=marApto+1
+            marApto+=1
         elif ((83<=temp<=86) or (69<=temp<=75)) or ((8.5<=prec<=10.4) or (5<=prec<=5.9)):
-            modApto=modApto+1
+            modApto+=1
         else:
-            sumApto=sumApto+1
+            sumApto+=1
     else:
-        noApto=noApto+1
+        noApto+=1
     i+=1
 
 promTemp=float(cuentaTemp/datos)
