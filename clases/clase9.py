@@ -38,3 +38,58 @@ for i in range(n):
 
     #Escribe el código usando break que reciba una palabra e imprima el número de letras que tiene y las letras hasta que, o bien termine la palabra o encuentre la letra a. .
 
+"""
+palabra=input("Ingrese una palabra: ")
+longitud=len(palabra)
+cuenta=0
+var=("en total")
+
+
+for i in range(longitud):
+    if palabra[i]=="a":
+        print("Se encontró la palabra a")
+        var="antes de la letra a"
+        break
+    else:
+        print(palabra[i])
+        cuenta+=1
+print("La palabra", palabra, "tiene ", cuenta, "caracteres", var)
+"""
+
+    #Escribe un algoritmo que lea 10 números e imprima cuantos son positivos, cuantos negativos y cuantos neutros(0).
+
+"""
+print("Se le pediran 10 números, el programa dirá cuantos son neg, pos, o 0")
+
+neg=0
+pos=0
+neu=0
+
+for i in range(10):
+    numero=int(input("Escriba un número: "))
+    if numero>0:
+        pos+=1
+    elif numero==0:
+        neu+=1
+    else:
+        neg+=1
+
+print("Usted digitó, ", pos, "números positivos,", neg, "números negativos y", neu, "ceros")
+"""
+
+    #Usando tanto while como for, escribe el codigo que pida números al usuario hasta que este ingrese -1 y que retorne el factorial de cada número ingresado usando un ciclo Para (For).
+
+
+num=0
+fac=1
+
+while num!=-1:
+    num=int(input("digíte número para saber su factorial: "))
+    if num==-1:
+        break
+    fac=1
+    for i in range(num,1,-1):
+        fac=fac*num
+        num-=1
+    print(fac)
+print("adios")
