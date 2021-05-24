@@ -81,15 +81,13 @@ print("Usted digitó, ", pos, "números positivos,", neg, "números negativos y"
 
 
 num=0
-fac=1
 
 while num!=-1:
-    num=int(input("digíte número para saber su factorial: "))
-    if num==-1:
-        break
-    fac=1
-    for i in range(num,1,-1):
-        fac=fac*num
-        num-=1
-    print(fac)
+    num=int(input("Digite número para saber su factorial: "))
+    if num!=-1:
+        fac=1
+        for i in range(num,1,-1):
+            print("Voy por el: ", i)
+            fac=fac*i
+        print(fac)
 print("adios")
