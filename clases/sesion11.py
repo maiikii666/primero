@@ -64,4 +64,3 @@ def ejemplo3():
 #    primos(x) - Una función que imprima los números de la lista que son números primos
 
 #actividad2()
-

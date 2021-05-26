@@ -46,28 +46,26 @@ from random import randint
 
 lista=[]
 while len(lista)<6:
-    lista.append(randint(1,20))
+    lista.append(randint(1,100))
 
-print("Numeros generados al azar:", lista)
+print("Números generados al azar:", lista)
 
 def mayor(x):
     may=x[0]
-    for i in range(len(x)):
+    for i in range(1,len(x)):
         if x[i]>may:
             may=x[i]
     print("El número mayor es: ",may)
 
 def primos(x):
     prim=[]
-    def valida(m):                    #Verificador de primos :)
+    def valida(m):
         for j in range(2,m,1):
             if m%j==0:
                 return False
         return True
     for i in range (len(x)):
-        if valida(x[i])==False:
-            continue
-        else:
+        if valida(x[i])==True:
             prim.append(x[i])
     print("Los números primos en la lista son: ",prim)
                         

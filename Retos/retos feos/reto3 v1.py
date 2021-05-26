@@ -2,8 +2,14 @@ datos=int(input("Ingrese la cantidad de datos que va a ingresar: "))
 
 temp=[]
 prec=[]
+
 promTemp=[]
 promPrec=[]
+
+sumApto=0
+modApto=0
+marApto=0
+noApto=0
 
 def promedio(x):
     suma=0
@@ -17,22 +23,18 @@ def real(z):
         z.append(float(z.pop(0)))
     return z
 
-def listas(b, c):
-    listaNF=(input("Ingrese los datos: "))
-    b=listaNF.split()
-    real(b)
-    c.append(promedio(b))
-    b=[]
-    return b, c
-
 for i in range(datos):
-    listas(temp, promTemp)
-    listas(prec, promPrec)
+    tempNF=(input("Ingrese los datos de temperatura: "))
+    temp=tempNF.split()
+    real(temp)
+    promTemp.append(promedio(temp))
+    precNF=(input("Ingrese los datos de precipitación: "))
+    prec=precNF.split()
+    real(prec)
+    promPrec.append(promedio(prec))
+    temp=[]
+    prom=[]
 
-sumApto=0
-modApto=0
-marApto=0
-noApto=0
 
 for i in range(len(promTemp)):
     if (64<=round(promTemp[i])<=90) and (4<=round(promPrec[i],1)<=12.5):
@@ -51,9 +53,3 @@ print("sumamente apto", sumApto)
 print("moderadamente apto", modApto)
 print("marginalmente apto", marApto)
 print("no apto", noApto)
-
-"""
-tempNew=[str(a) for a in promTemp]
-
-print(" ".join(tempNew))
-"""
