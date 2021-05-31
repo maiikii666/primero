@@ -11,16 +11,17 @@ while i<=n:
     pa = float(input())
     if  (tma<64 or tma>90) or (pa<4.0 or pa>12.5) :
         #No apto
-        cont1 +=1       
-    elif(tma>=76 and tma<=82) and (pa>=6.0 and pa<=8.4) :
-        #Sumamente apto
-        cont2 +=1        
+        cont1 +=1
+    elif ((tma>=87 and tma<=90) or (tma>=64 and tma<=68)) or ((pa>10.4 and pa<=12.5) or (pa>=4 and pa<5)) :
+        #Marginalmente apto
+        cont4 +=1
     elif ((tma>=83 and tma<=86) or (tma>=69 and tma<=75)) or ((pa>=8.5 and pa<=10.4) or (pa>=5.0 and pa<=5.9)) :
         #Moderadamente apto
-        cont3 +=1       
+        cont3 +=1
     else:
-        #Marginalmente apto
-        cont4 +=1 
+        #Sumamente apto
+        cont2 +=1
+       
     sumat+= tma
     sumap+= pa
     i+=1  

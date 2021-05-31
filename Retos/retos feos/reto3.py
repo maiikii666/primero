@@ -4,8 +4,6 @@ temp=[]
 prec=[]
 promTemp=[]
 promPrec=[]
-promTempSali=[]
-promPrecSali=[]
 
 def promedio(x):
     suma=0
@@ -27,12 +25,6 @@ def listas(b, c):
     b=[]
     return b, c
 
-def cadena(j,m):
-    for i in range (len(j)):
-        m.append(('%.2f' %j[i]))
-    return m
-
-
 for i in range(datos):
     listas(temp, promTemp)
     listas(prec, promPrec)
@@ -42,23 +34,19 @@ modApto=0
 marApto=0
 noApto=0
 
-for i in range(datos):
-    if (64<=promTemp[i]<=90) and (4<=promPrec[i]<=12.5):
-        if (68<promTemp[i]<=86) and (5<=promPrec[i]<=10.4):
-            if (75<promTemp[i]<=82) and (6.0<=promPrec[i]<=8.4):
-                sumApto+=1
-            else:
-                modApto+=1
-        else:
+for i in range(len(promTemp)):
+    if (64<=round(promTemp[i])<=90) and (4<=round(promPrec[i],1)<=12.5):
+        if ((87<=round(promTemp[i])<=90) or (64<=round(promTemp[i])<=68)) or ((10.4<round(promPrec[i],1)<=12.5) or (4<=round(promPrec[i],1)<5)):
             marApto+=1
+        elif ((83<=round(promTemp[i])<=86) or (69<=round(promTemp[i])<=75)) or ((8.4<round(promPrec[i],1)<=10.4) or (5<=round(promPrec[i],1)<6)):
+            modApto+=1
+        else:
+            sumApto+=1
     else:
         noApto+=1
 
-cadena(promTemp,promTempSali)
-cadena(promPrec,promPrecSali)
-
-print(*promTempSali, sep=" ")
-print(*promPrecSali, sep=" ")
+print(*promTemp, sep=" ")
+print(*promPrec, sep=" ")
 print("sumamente apto", sumApto)
 print("moderadamente apto", modApto)
 print("marginalmente apto", marApto)

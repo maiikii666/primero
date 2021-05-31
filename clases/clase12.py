@@ -4,6 +4,8 @@
 #    mayor(x) - Una función que imprima el número mayor valor de una lista x
 #    primos(x) - Una función que imprima los números de la lista que son números primos
 #    orden(x) - Una función que ordene los datos de una lista x ascendentemente y la imprima en orden
+
+
 """
 from random import randint
 
@@ -35,26 +37,17 @@ def primos(x):
         else:
             prim.append(x[i])
     print("Los números primos en la lista son: ",prim)
-"""
-def orden(x):
-    ordenada=[]
-    for i in range(len(x)):
-        n=mayor(x,0)
-        ordenada.insert(0,n)
-        x.remove(n)
-    print(ordenada)
-"""
-def orden(x):
-    for i in range(len(x)):
-        n=mayor(x,0)
-        x.remove(n)
-        x.append(n)
-    print(x)
+
+def ordenar(x):
+    print(sorted(x))
+
 
 mayor(lista,1)
 primos(lista)
-orden(lista)
+ordenar(lista)
+
 """
+
 
 v=[2,5,7,4,8,1,3,6]
 
