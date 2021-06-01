@@ -1,5 +1,4 @@
 datos=int(input())
-
 temp=[]
 prec=[]
 promTemp=[]
@@ -31,7 +30,6 @@ def cadena(j,m):
     for i in range (len(j)):
         m.append(('%.2f' %j[i]))
     return m
-
 
 for i in range(datos):
     listas(temp, promTemp)

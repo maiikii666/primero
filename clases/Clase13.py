@@ -24,6 +24,7 @@ print(C)
 #Vamos a escribir una funcion que llene una matriz de 5 filas y 10 columnas con números enteros entre 1 y 100
 #aleatorios, imprima los valores máximo y mínimo y sus posiciones dentro de la matriz.
 
+
 from random import randint
 
 
