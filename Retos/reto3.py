@@ -11,7 +11,7 @@ def promedio(x):
     for i in range(len(x)):
         suma+=x[i]
     prom=suma/len(x)
-    return round(prom, 2)
+    return prom
 
 def real(z):
     for i in range (len(z)):
@@ -27,8 +27,10 @@ def listas(b, c):
     return b, c
 
 def cadena(j,m):
+    x=0
     for i in range (len(j)):
-        m.append(('%.2f' %j[i]))
+        x=round(j[i],2)
+        m.append(('%.2f' %x))
     return m
 
 for i in range(datos):
