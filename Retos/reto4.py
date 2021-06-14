@@ -26,6 +26,14 @@ def masPresente(a,b,c,d):
         return "no apto"
 
 def menosPresente(a,b,c,d):
+    if a==0:
+        a=9999
+    if b==0:
+        b=9999
+    if c==0:
+        c=9999
+    if d==0:
+        d=9999
     if a<=b and a<=c and a<=d:
         return "sumamente apto"
     elif b<a and b<=c and b<=d:
@@ -80,5 +88,6 @@ def clasificacion(a,A,B):
 cuentageneral=clasificacion(datos,temp,prec)
 
 print(cuentageneral[3],cuentageneral[2],cuentageneral[1],cuentageneral[0])
-print(*menor, sep=",")
+
 print(*mayor, sep=",")
+print(*menor, sep=",")

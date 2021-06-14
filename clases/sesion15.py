@@ -83,15 +83,12 @@ def imprimeMatriz(matriz):
 #imprimeMatriz(A)
 
 def calcularPromedio(T):
-    I=[]
+    I=0
+    suma=0
     for i in range (len(T)):
-        suma=0
         for j in range(len(T[i])):
             suma+=T[i][j]
-        promedio=suma/len(T[i])
-        I.append(promedio)
-    #for i in range(len(I)):
-        #print(I[i])
+    I=suma/((len(T))*(len(T[0])))
     return I
 
 #calcularPromedio(A)
@@ -104,19 +101,18 @@ def actividad2(m,n):
     B=crearMatriz(m,n)
     print("Matriz inicial: ")
     imprimeMatriz(B)
-    C=[]
     C=calcularPromedio(B)
     D=[]
     for i in range (len(B)):
         F=[]
         for j in range(len(B[i])):
-            if B[i][j]>C[i]:
+            if B[i][j]>C:
                 F.append(1)
             else:
                 F.append(0)
         D.append(F)
-    print("Promedios de cada fila: ")
-    imprimeMatriz(C)
+    print("Promedio de la matríz: ")
+    print(C)
     print("Si el elemento es mayor que el promedio, imprime 1, de lo contrario, imprime 0.")
     imprimeMatriz(D)
 

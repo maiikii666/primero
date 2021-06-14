@@ -1,0 +1,31 @@
+--------------------
+Date: 8:6:2021
+Time: 22:46
+Phone number: +573163997230
+Message: Mensaje de Prueba
+--------------------
+Date: 8:6:2021
+Time: 0:10
+Phone number: +573163997230
+Message: Mensaje de Prueba
+--------------------
+Date: 8:6:2021
+Time: 22:52
+Phone number: +573163997230
+Message: Mensaje de Prueba
+--------------------
+Date: 9:6:2021
+Time: 12:26
+Phone number: +573016941436
+Message: Mensaje de Prueba desde python
+--------------------
+Date: 9:6:2021
+Time: 12:35
+Phone number: +573163997230
+Message: Este es un mensaje automatico para que me des las nalguitas
+--------------------
+Date: 9:6:2021
+Time: 16:38
+Phone number: +573163997230
+Message: Cuando te llegue vienes y me das un beso
+--------------------
