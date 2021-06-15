@@ -1,19 +1,17 @@
 archivo=open('c:/Users/User/OneDrive/Escritorio/programación/Retos/data.csv', 'r')
+x=archivo.readlines()
 
-##############Poner la ruta relativa
-x=archivo.readlines()  ###Lee el archivo completo
-
-def fun1(x):   ###Adapta las listas del archivo a lo que necesito.
+def fun1(x):
     I=[]
-    for i in range(1,len(x)):  ### desde 1 para ignorar el titulo
-        J=x[i].split(",")   ###Separa la lista
+    for i in range(1,len(x)):
+        J=x[i].split(",")
         L=[]
-        L.append(J[0])   ### Mete la ciudad
+        L.append(J[0])
         f=float(J[3])
-        L.append(f)  ###Mete la temperatura
+        L.append(f)
         g=float(J[4])
-        L.append(g)  ###Mete la precipitación
-        L.append(J[6])  ### Mete la condición del campo
+        L.append(g)
+        L.append(J[6])
         I.append(L)
     return(I)
 
@@ -51,11 +49,10 @@ def fun2(lista,x):
     promtemp=sumatemp/cuenta
     promprec=sumaprec/cuenta
     return [temps,precs,promtemp,promprec,noap,marg,mode,suma]
-    
 
-x=input()         ##############Pregunta ciudad
+x=input()
 definicion=[]
-definicion=fun2(matrizCompleta,x) #0. todas las temp 1. todas las prec 2. promtemp, 3.promprec 4, noap,5. marg. 6. mode. 7. sumame
+definicion=fun2(matrizCompleta,x)
 
 valorMinT=min(definicion[0])
 valorMinP=min(definicion[1])
@@ -63,22 +60,29 @@ valorMaxT=max(definicion[0])
 valorMaxP=max(definicion[1])
 
 organiza=[]
+organiza.extend([definicion[4],definicion[5],definicion[6],definicion[7]])
 
+organizaFinal=[]
 
-print(round(definicion[2],2), round(definicion[3],2))
+for i in range(len(organiza)):
+    if organiza[0]>(organiza[1] and organiza[2] and organiza[3]):
+        organizaFinal.append(["no apto", organiza[0]])
+        organiza[0]=0
+    elif organiza[1]>(organiza[0] and organiza[2] and organiza[3]):
+        organizaFinal.append(["marginalmente apto", organiza[1]])
+        organiza[1]=0
+    elif organiza[2]>(organiza[0] and organiza[1] and organiza[3]):
+        organizaFinal.append(["moderadamente apto", organiza[2]])
+        organiza[2]=0
+    elif organiza[3]>(organiza[0] and organiza[1] and organiza[2]):
+        organizaFinal.append(["sumamente apto", organiza[3]])
+        organiza[3]=0
+
+print(('%.2f' %definicion[2]), ('%.2f' %definicion[3]))
 print(round(valorMinT), round(valorMinP,2))
 print(round(valorMaxT), round(valorMaxP,2))
-print("no apto", definicion[4])
-print("marginalmente apto", definicion[5])
-print("moderadamente apto", definicion[6])
-print("sumamente apto", definicion[7])
 
-###PRUEBAS
-"""
-print(len(matrizCompleta))
-print(matrizCompleta[0])
-print(matrizCompleta[1])
-print(definicion[2],definicion[3],definicion[4],definicion[5],definicion[6],definicion[7])
-
-print(valorMinT,valorMinP,valorMaxT,valorMaxP)
-"""
+print(*organizaFinal[0], sep=" ")
+print(*organizaFinal[1], sep=" ")
+print(*organizaFinal[2], sep=" ")
+print(*organizaFinal[3], sep=" ")

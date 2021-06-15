@@ -50,6 +50,7 @@ while (limite<=x):
             print("sumo")
             napto=(x-(suapto+morapto+marapto))
 
+
 for i in range (len(listapromediost)):
     listatempsalida.append(('%.2f' %listapromediost[i])) ####Crea una lista que obliga a que hayan dos decimales
     listaprecsalida.append(('%.2f' %listapromediosp[i]))
