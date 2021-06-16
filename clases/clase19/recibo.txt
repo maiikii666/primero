@@ -1,0 +1,1 @@
+﻿{'nombre': 'arroz', 'valor': 404040.0}{'nombre': 'papa', 'valor': 505050.0}
