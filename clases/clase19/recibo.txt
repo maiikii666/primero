@@ -1,1 +1,3 @@
-﻿{'nombre': 'arroz', 'valor': 404040.0}{'nombre': 'papa', 'valor': 505050.0}
+﻿{'nombre': 'arroz', 'valor': 383838.0}
+{'nombre': 'papa', 'valor': 4094949.0}
+{'nombre': 'aguacate', 'valor': 494949.0}

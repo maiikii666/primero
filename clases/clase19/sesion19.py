@@ -67,7 +67,7 @@ print(diccionarioNumeros[x])
 
 
 def guardaProducto(archivo,x):
-    archivo.writelines(str(x))
+    archivo.writelines([str(x),"\n"])
 
 def caja():
     nuevoArchivo = open('c:/Users/User/OneDrive/Escritorio/programación/clases/clase19/recibo.txt', mode='w', encoding='utf-8-sig')
@@ -85,5 +85,3 @@ def caja():
 caja()
 miArchivo = open('c:/Users/User/OneDrive/Escritorio/programación/clases/clase19/recibo.txt', mode='r')
 print(miArchivo.readlines())
-    
-

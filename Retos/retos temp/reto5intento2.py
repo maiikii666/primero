@@ -31,8 +31,8 @@ def fun2(ciudad,valor):
 
 def promedio(lista):
     suma=0
-    for i in lista:
-        suma+=i
+    for i in range (len(lista)):
+        suma+=lista[i]
     promedio=suma/(len(lista))
     return promedio
 
@@ -61,7 +61,7 @@ matriz.append(fun1(ciudad,3))
 matriz.append(fun1(ciudad,4))
 matriz.append(fun2(ciudad,6))
 
-print(('%.2f' %promedio(matriz[0])),('%.2f' %(promedio(matriz[1]))))
+print(round(promedio(matriz[0]),2),(round(promedio(matriz[1]),2)))
 print(round(min(matriz[0])), min(matriz[1]))
 print(round(max(matriz[0])), max(matriz[1]))
 print(*salida(matriz[2],3), sep=" ")
